@@ -7,21 +7,39 @@
 .container{
 display: flex;
 flex-direction: row;
-flex-wrap: wrap ;
-justify-content: space-evenly;
+flex-wrap: wrap ;                         
+/* if child container size exced parent conntainer then next line mee jayega */
+flex-flow: row wrap;
+/* merge both the above flex */
+justify-content: space-evenly ;
+/* define space between child container  6 types */
 align-items: center;
-align-content: space-around;
+ /* 5 property */
+/* align-content: space-around; */
+/* 6 property */
 column-gap: 30px;
 row-gap: 30px;
-height: 200px;
+height: 600px;
 width: 800px;
-border: 5px solid black;
+border: 5px solid rgb(246, 166, 7);
+background-color: rgb(206, 44, 93);
 }
 
 .item{
     height: 50px;
     width: 300px;
-    font: 19px solid rgb(10, 171, 207);
-    border: 3px solid rgb(10, 10, 10);
-    background-color: brown;
+    font: 19px solid rgb(207, 10, 151);
+    border: 3px solid rgb(157, 205, 25);
+    background-color: rgb(41, 229, 148);
+    flex-grow: 1;
+    /* for occupying all sapce of parent space in left or right side */
+}
+
+.item4{
+order: -1;
+/* for change the numbering */
+flex-grow: 2;
+/* for gaining more space */
+align-self:flex-end  ;
+/* for changing the line */
 }
